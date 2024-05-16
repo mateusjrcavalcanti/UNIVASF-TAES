@@ -24,7 +24,7 @@ export default function RootLayout({
 
   useGlobalDOMEvents({ keydown: handleKeyDown });
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+    <main className="bg-[#202123] text-white min-h-screen p-24">
       {children}
     </main>
   );
