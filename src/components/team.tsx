@@ -10,7 +10,12 @@ export const Team = () => {
           src="https://media.licdn.com/dms/image/C4D03AQGAPELDg89vtQ/profile-displayphoto-shrink_800_800/0/1660916597360?e=1721260800&v=beta&t=0nBKqGGphegIsPjflNyfuI-k6pfHWz0qRxJP3nreA2M"
           linkedin="ariel-fernando-a746a1b8"
         />
-        <Member name="Mateus Almeida" src="/person.jpg" />
+        <Member
+          name="Mateus Almeida"
+          src="https://media.licdn.com/dms/image/D4D03AQFmSGn09ocaRQ/profile-displayphoto-shrink_800_800/0/1715872927102?e=1721260800&v=beta&t=m-LYYJp443ZQZDeLZiLYAfjgVyhc4yzJwx3Hn-UxrRQ"
+          github="mateusalmeiida"
+          linkedin="mateus-de-almeida-ribeiro"
+        />
         <Member
           name="Mateus Junior"
           src="https://media.licdn.com/dms/image/C4D03AQGmgKWHmbdA8A/profile-displayphoto-shrink_800_800/0/1580687567920?e=1721260800&v=beta&t=bwNR92ziPCOPyKnq8h798_-eHTQcKQECy_aTEQAzNhQ"
