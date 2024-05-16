@@ -16,7 +16,7 @@ export default function RootLayout({
     if (ev instanceof KeyboardEvent) {
       if (ev.key === "ArrowRight") {
         router.push(`/presentation/${slideNumber + 1}`);
-      } else if (ev.key === "ArrowLeft") {
+      } else if (ev.key === "ArrowLeft" && slideNumber > 1) {
         router.push(`/presentation/${slideNumber - 1}`);
       }
     }
