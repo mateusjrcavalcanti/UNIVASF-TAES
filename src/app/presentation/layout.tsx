@@ -24,8 +24,6 @@ export default function RootLayout({
 
   useGlobalDOMEvents({ keydown: handleKeyDown });
   return (
-    <main className="bg-[#202123] text-white min-h-screen p-24">
-      {children}
-    </main>
+    <main className="bg-[#202123] text-white min-h-screen ">{children}</main>
   );
 }

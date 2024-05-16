@@ -8,12 +8,12 @@ import { TiMicrophoneOutline } from "react-icons/ti";
 export default function Slide1() {
   return (
     <div className="px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
-      <div className="max-w-4xl mx-auto">
-        <h2 className="text-3xl font-bold sm:text-4xl text-center">
+      <div className="max-w-6xl mx-auto">
+        <h1 className="text-3xl font-bold sm:text-4xl text-center">
           Explorar a API da OpenAI
-        </h2>
+        </h1>
 
-        <p className="mt-4 text-gray-300">
+        <p className="text-xl mt-4 text-gray-300">
           A API da OpenAI é uma poderosa ferramenta que oferece acesso a
           diversos modelos de inteligência artificial para realizar uma
           variedade de tarefas. É uma plataforma versátil e eficaz para aplicar
@@ -21,7 +21,7 @@ export default function Slide1() {
         </p>
       </div>
 
-      <div className="mx-auto max-w-4xl mt-8 grid grid-cols-1 gap-8 md:mt-16 md:grid-cols-2 md:gap-12 lg:grid-cols-3">
+      <div className="max-w-6xl mx-auto mt-8 grid grid-cols-1 gap-8 md:mt-16 md:grid-cols-2 md:gap-12 lg:grid-cols-3">
         <ItemWithIcon
           iconClassName="bg-gradient-to-r from-[#5436da] to-[#341c9c]"
           title="Geração de texto"
@@ -29,7 +29,7 @@ export default function Slide1() {
           icon={<IoChatbubbleEllipsesOutline size={24} />}
         />
         <ItemWithIcon
-          iconClassName="bg-gradient-to-r from-[#5436da] to-[#341c9c]"
+          iconClassName="bg-gradient-to-r from-[#fa7507] to-[#ff7300]"
           title="Geração de imagem"
           description="Rera ou manipula imagens com DALL·E a partir de entradas de texto."
           icon={<HiOutlinePhotograph size={24} />}
@@ -47,7 +47,7 @@ export default function Slide1() {
           icon={<BsSoundwave />}
         />
         <ItemWithIcon
-          iconClassName="bg-gradient-to-r from-[#19c37d] to-[#13a065]"
+          iconClassName="bg-gradient-to-r from-[#7719c3] to-[#9f4ae6]"
           title="Visão"
           description="Processa entradas de imagem com GPT-4"
           icon={<MdOutlineRemoveRedEye size={24} />}
