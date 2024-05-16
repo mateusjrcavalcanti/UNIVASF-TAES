@@ -15,19 +15,14 @@ export const ItemWithIcon = ({
 }>) => {
   return (
     <div className="flex items-start gap-4">
-      <span
-        className={cn(
-          "shrink-0 rounded-lg p-4 text-xl text-white",
-          iconClassName
-        )}
-      >
+      <span className={cn("shrink-0 rounded-lg p-4 text-white", iconClassName)}>
         {icon}
       </span>
 
       <div>
-        <h2 className="text-lg font-bold">{title}</h2>
+        <h2 className="text-xl font-bold">{title}</h2>
 
-        <p className="mt-1 text-sm text-gray-300">{description}</p>
+        <p className="mt-1 text-lg text-gray-300">{description}</p>
       </div>
     </div>
   );
