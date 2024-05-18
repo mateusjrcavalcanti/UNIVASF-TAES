@@ -7,6 +7,14 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "TAES",
   description: "Desenvolvimento de Software com a API openAI",
+  icons: {
+    icon: "/taes.png",
+  },
+  openGraph: {
+    images: [{ url: "/taes.png", width: 494, height: 492 }],
+    locale: "pt_BR",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
