@@ -3,7 +3,7 @@ import { FcKey } from "react-icons/fc";
 
 export default function Slide2() {
   return (
-    <div className="flex justify-center">
+    <>
       <div>
         <h1 className="text-3xl font-bold sm:text-4xl text-center">
           Conceitos chave
@@ -54,6 +54,6 @@ export default function Slide2() {
       <div className="flex p-14 items-center">
         <FcKey size={300} />
       </div>
-    </div>
+    </>
   );
 }

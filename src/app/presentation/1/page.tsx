@@ -7,7 +7,7 @@ import { TiMicrophoneOutline } from "react-icons/ti";
 
 export default function Slide1() {
   return (
-    <>
+    <div>
       <h1 className="text-3xl font-bold sm:text-4xl text-center">
         Explorar a API da OpenAI
       </h1>
@@ -51,6 +51,6 @@ export default function Slide1() {
           icon={<MdOutlineRemoveRedEye size={24} />}
         />
       </div>
-    </>
+    </div>
   );
 }

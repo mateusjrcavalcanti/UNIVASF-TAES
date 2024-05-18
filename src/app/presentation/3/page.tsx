@@ -1,21 +1,19 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
-import { SiAwssecretsmanager } from "react-icons/si";
 import Zoom from "react-medium-image-zoom";
 import "react-medium-image-zoom/dist/styles.css";
 
 import CodeMirror from "@uiw/react-codemirror";
-import { javascript } from "@codemirror/lang-javascript";
 import { StreamLanguage } from "@codemirror/language";
 import { shell } from "@codemirror/legacy-modes/mode/shell";
 import { dracula } from "@uiw/codemirror-theme-dracula";
 
-const extensions = [javascript({ jsx: true })];
+import Openai from "../../../../public/openai.svg";
 
 /* eslint-disable react/no-unescaped-entities */
 export default function Slide2() {
   return (
-    <div className="flex justify-center">
+    <>
       <div>
         <h1 className="text-3xl font-bold sm:text-4xl text-center">
           Etapas (NodeJS)
@@ -62,33 +60,10 @@ export default function Slide2() {
             />
           </Zoom>
         </div>
-
-        <h2 className="mt-10 text-2xl font-bold sm:text-3xl text-start">
-          2. Instale o Node.js.
-        </h2>
-
-        <p className="text-xl text-justify mt-4 text-gray-300">
-          Para baixar o Node.js, acesse o site oficial do Node e baixe a versão
-          mais recente marcada como “LTS” (Long Term Support). Se estiver
-          instalando o Node.js pela primeira vez, você pode seguir o guia
-          oficial de uso do Node.js para começar.
-        </p>
-
-        <h2 className="mt-10 text-2xl font-bold sm:text-3xl text-start">
-          3. Instale a biblioteca OpenAI Node.js.
-        </h2>
-
-        <CodeMirror
-          className="mt-4"
-          value={`npm install --save openai\n# or\nyarn add openai`}
-          height="200px"
-          theme={dracula}
-          extensions={[StreamLanguage.define(shell)]}
-        />
       </div>
       <div className="flex p-14 items-center">
-        <SiAwssecretsmanager size={300} />
+        <Openai width={300} fill="#23a27d" />
       </div>
-    </div>
+    </>
   );
 }

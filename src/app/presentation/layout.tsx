@@ -24,8 +24,8 @@ export default function RootLayout({
 
   useGlobalDOMEvents({ keydown: handleKeyDown });
   return (
-    <main className="bg-[#202123] text-white min-h-screen ">
-      <div className="container mx-auto px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
+    <main className="bg-[#202123] text-white min-h-screen flex flex-col">
+      <div className="container flex justify-center flex-grow mx-auto px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
         {children}
       </div>
     </main>
