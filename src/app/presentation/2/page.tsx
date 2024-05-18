@@ -5,9 +5,12 @@ export default function Slide2() {
   return (
     <>
       <div>
-        <h1 className="text-3xl font-bold sm:text-4xl text-center">
-          Conceitos chave
-        </h1>
+        <div className="flex justify-center items-center align-middle">
+          <FcKey size={50} />
+          <h1 className="text-3xl font-bold sm:text-4xl text-center">
+            Conceitos chave
+          </h1>
+        </div>
 
         <h2 className="mt-10 text-2xl font-bold sm:text-3xl text-start">
           Modelos de geração de texto
@@ -50,9 +53,6 @@ export default function Slide2() {
           contexto para cada modelo de geração de texto e incorporação podem ser
           encontrados no índice do modelo .
         </p>
-      </div>
-      <div className="flex p-14 items-center">
-        <FcKey size={300} />
       </div>
     </>
   );

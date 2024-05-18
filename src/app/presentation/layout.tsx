@@ -3,6 +3,8 @@
 import useGlobalDOMEvents from "@/hooks/useGlobalDOMEvents";
 import { usePathname, useRouter } from "next/navigation";
 
+import "react-medium-image-zoom/dist/styles.css";
+
 export default function RootLayout({
   children,
 }: Readonly<{

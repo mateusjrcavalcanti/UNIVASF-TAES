@@ -1,40 +1,43 @@
+/* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable @next/next/no-img-element */
 "use client";
-import "react-medium-image-zoom/dist/styles.css";
 
-import CodeMirror from "@uiw/react-codemirror";
-import { StreamLanguage } from "@codemirror/language";
-import { shell } from "@codemirror/legacy-modes/mode/shell";
-import { dracula } from "@uiw/codemirror-theme-dracula";
-
-import Openai from "../../../../public/openai.svg";
+import { Code } from "@/components/code";
+import NodeJS from "../../../../public/nodejs.svg";
 
 /* eslint-disable react/no-unescaped-entities */
 export default function Slide2() {
   return (
-    <>
-      <div>
-        <h1 className="text-3xl font-bold sm:text-4xl text-center">
-          Etapas (NodeJS)
-        </h1>
+    <div>
+      <>
+        <NodeJS className="mx-auto mb-5" />
+      </>
 
-        <h2 className="mt-10 text-2xl font-bold sm:text-3xl text-start">
-          3. Instale a biblioteca OpenAI Node.js.
-        </h2>
+      <h1 className="text-3xl font-bold sm:text-4xl text-center">
+        Etapas (NodeJS)
+      </h1>
 
-        <CodeMirror
-          className="mt-4"
-          value={`npm install openai\n\t# or\nyarn add openai\n\t# or\npnpm i openai`}
-          height="200px"
-          theme={dracula}
-          extensions={[StreamLanguage.define(shell)]}
-          editable={false}
-          autoFocus={false}
-        />
-      </div>
-      <div className="flex p-14 items-center">
-        <Openai width="300px" height="300px" fill="#23a27d" />
-      </div>
-    </>
+      <h2 className="mt-10 text-2xl font-bold sm:text-3xl text-start">
+        3.1 Crie um diretório e inicie um projeto Node.js.
+      </h2>
+
+      <Code
+        language="shell"
+        value={`mkdir taes\ncd taes\nnpm init -y`}
+        editable={false}
+      />
+
+      <h2 className="mt-10 text-2xl font-bold sm:text-3xl text-start">
+        3.2 Instale a biblioteca OpenAI Node.js.
+      </h2>
+
+      <Code language="shell" value={`npm i openai`} editable={false} />
+
+      <h2 className="mt-10 text-2xl font-bold sm:text-3xl text-start">
+        Resultado:
+      </h2>
+
+      <img src="/project/created.png" />
+    </div>
   );
 }

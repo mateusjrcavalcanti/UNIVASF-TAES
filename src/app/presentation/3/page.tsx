@@ -1,13 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 import Zoom from "react-medium-image-zoom";
-import "react-medium-image-zoom/dist/styles.css";
-
-import CodeMirror from "@uiw/react-codemirror";
-import { StreamLanguage } from "@codemirror/language";
-import { shell } from "@codemirror/legacy-modes/mode/shell";
-import { dracula } from "@uiw/codemirror-theme-dracula";
-
 import Openai from "../../../../public/openai.svg";
 
 /* eslint-disable react/no-unescaped-entities */
@@ -15,6 +8,9 @@ export default function Slide2() {
   return (
     <>
       <div>
+        <>
+          <Openai className="mx-auto mb-5" width={100} fill="#23a27d" />
+        </>
         <h1 className="text-3xl font-bold sm:text-4xl text-center">
           Etapas (NodeJS)
         </h1>
@@ -60,9 +56,6 @@ export default function Slide2() {
             />
           </Zoom>
         </div>
-      </div>
-      <div className="flex p-14 items-center">
-        <Openai width={300} fill="#23a27d" />
       </div>
     </>
   );

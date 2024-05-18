@@ -1,31 +1,29 @@
+/* eslint-disable jsx-a11y/alt-text */
+/* eslint-disable react/no-unescaped-entities */
 /* eslint-disable @next/next/no-img-element */
 "use client";
-import "react-medium-image-zoom/dist/styles.css";
 
-import CodeMirror from "@uiw/react-codemirror";
-import { StreamLanguage } from "@codemirror/language";
-import { shell } from "@codemirror/legacy-modes/mode/shell";
-import { dracula } from "@uiw/codemirror-theme-dracula";
-
-import Openai from "../../../../public/openai.svg";
+import NodeJS from "../../../../public/nodejs.svg";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@radix-ui/react-tabs";
 import {
   Card,
   CardHeader,
   CardTitle,
-  CardDescription,
   CardContent,
   CardFooter,
 } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Button } from "@/components/ui/button";
+import { Code } from "@/components/code";
+import { FcLinux } from "react-icons/fc";
+import { BiLogoWindows } from "react-icons/bi";
 
-/* eslint-disable react/no-unescaped-entities */
 export default function Slide2() {
   return (
     <>
       <div>
+        <>
+          <NodeJS className="mx-auto mb-5" />
+        </>
+
         <h1 className="text-3xl font-bold sm:text-4xl text-center">
           Etapas (NodeJS)
         </h1>
@@ -43,9 +41,6 @@ export default function Slide2() {
 
         <TabsNode />
       </div>
-      <div className="flex p-14 items-center">
-        <Openai width={300} fill="#23a27d" />
-      </div>
     </>
   );
 }
@@ -55,16 +50,16 @@ function TabsNode() {
     <Tabs defaultValue="linux">
       <TabsList className="flex my-5">
         <TabsTrigger
-          className="mx-auto py-2 px-4 bg-white rounded-xl text-black text-lg font-bold"
+          className="flex items-center mx-auto py-2 px-4 bg-white rounded-xl text-black text-lg font-bold"
           value="linux"
         >
-          Linux
+          <FcLinux size={30} className="mr-1" /> Linux
         </TabsTrigger>
         <TabsTrigger
-          className="mx-auto py-2 px-4 bg-white rounded-xl text-black text-lg font-bold"
+          className="flex items-center mx-auto py-2 px-4 bg-white rounded-xl text-black text-lg font-bold"
           value="windows"
         >
-          Windows
+          <BiLogoWindows size={30} className="mr-1" /> Windows
         </TabsTrigger>
       </TabsList>
       <TabsContent value="linux">
@@ -75,13 +70,7 @@ function TabsNode() {
             </CardTitle>
           </CardHeader>
           <CardContent className="space-y-2">
-            <CodeMirror
-              value={linuxCode}
-              theme={dracula}
-              extensions={[StreamLanguage.define(shell)]}
-              editable={false}
-              autoFocus={false}
-            />
+            <Code language="shell" value={linuxCode} editable={false} />
           </CardContent>
           <CardFooter></CardFooter>
         </Card>
@@ -94,13 +83,7 @@ function TabsNode() {
             </CardTitle>
           </CardHeader>
           <CardContent className="space-y-2">
-            <CodeMirror
-              value={windowsCode}
-              theme={dracula}
-              extensions={[StreamLanguage.define(shell)]}
-              editable={false}
-              autoFocus={false}
-            />
+            <Code language="shell" value={windowsCode} editable={false} />
           </CardContent>
           <CardFooter></CardFooter>
         </Card>
