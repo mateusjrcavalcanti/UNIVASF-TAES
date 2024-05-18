@@ -7,21 +7,19 @@ import { TiMicrophoneOutline } from "react-icons/ti";
 
 export default function Slide1() {
   return (
-    <div className="px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
-      <div className="max-w-6xl mx-auto">
-        <h1 className="text-3xl font-bold sm:text-4xl text-center">
-          Explorar a API da OpenAI
-        </h1>
+    <>
+      <h1 className="text-3xl font-bold sm:text-4xl text-center">
+        Explorar a API da OpenAI
+      </h1>
 
-        <p className="text-xl mt-4 text-gray-300">
-          A API da OpenAI é uma poderosa ferramenta que oferece acesso a
-          diversos modelos de inteligência artificial para realizar uma
-          variedade de tarefas. É uma plataforma versátil e eficaz para aplicar
-          técnicas de IA em uma variedade de contextos.
-        </p>
-      </div>
+      <p className="text-xl mt-4 text-gray-300">
+        A API da OpenAI é uma poderosa ferramenta que oferece acesso a diversos
+        modelos de inteligência artificial para realizar uma variedade de
+        tarefas. É uma plataforma versátil e eficaz para aplicar técnicas de IA
+        em uma variedade de contextos.
+      </p>
 
-      <div className="max-w-6xl mx-auto mt-8 grid grid-cols-1 gap-8 md:mt-16 md:grid-cols-2 md:gap-12 lg:grid-cols-3">
+      <div className="mx-auto mt-8 grid grid-cols-1 gap-8 md:mt-16 md:grid-cols-2 md:gap-12 lg:grid-cols-3">
         <ItemWithIcon
           iconClassName="bg-gradient-to-r from-[#5436da] to-[#341c9c]"
           title="Geração de texto"
@@ -53,6 +51,6 @@ export default function Slide1() {
           icon={<MdOutlineRemoveRedEye size={24} />}
         />
       </div>
-    </div>
+    </>
   );
 }

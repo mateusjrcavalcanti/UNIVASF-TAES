@@ -1,113 +1,59 @@
-import Image from "next/image";
+/* eslint-disable react/no-unescaped-entities */
+import { FcKey } from "react-icons/fc";
 
-export default function Slide1() {
+export default function Slide2() {
   return (
-    <>
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
+    <div className="flex justify-center">
+      <div>
+        <h1 className="text-3xl font-bold sm:text-4xl text-center">
+          Conceitos chave
+        </h1>
+
+        <h2 className="mt-10 text-2xl font-bold sm:text-3xl text-start">
+          Modelos de geração de texto
+        </h2>
+
+        <p className="text-xl text-justify mt-4 text-gray-300">
+          Os modelos de geração de texto da OpenAI (muitas vezes chamados de
+          transformadores generativos pré-treinados ou modelos "GPT"), como
+          GPT-4 e GPT-3.5, foram treinados para compreender a linguagem natural
+          e formal. Modelos como o GPT-4 permitem saídas de texto em resposta às
+          suas entradas. As entradas para esses modelos também são chamadas de
+          “prompts”. Projetar um prompt é essencialmente como você "programa" um
+          modelo como o GPT-4, geralmente fornecendo instruções ou alguns
+          exemplos de como concluir uma tarefa com êxito. Modelos como o GPT-4
+          podem ser usados ​​em uma grande variedade de tarefas, incluindo
+          geração de conteúdo ou código, resumo, conversação, redação criativa e
+          muito mais. Leia mais em nosso guia introdutório de geração de texto e
+          em nosso guia de engenharia imediata .
         </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
+
+        <h2 className="mt-10 text-2xl font-bold sm:text-3xl text-start">
+          Tokens
+        </h2>
+
+        <p className="text-xl text-justify mt-4 text-gray-300">
+          Os modelos de geração e incorporação de texto processam o texto em
+          pedaços chamados tokens. Os tokens representam sequências de
+          caracteres que ocorrem comumente. Por exemplo, a string "tokenization"
+          é decomposta como "token" e "ization", enquanto uma palavra curta e
+          comum como "the" é representada como um único token. Observe que em
+          uma frase, o primeiro token de cada palavra normalmente começa com um
+          caractere de espaço. Confira nossa ferramenta tokenizer para testar
+          strings específicas e ver como elas são traduzidas em tokens. Como
+          regra geral, 1 token tem aproximadamente 4 caracteres ou 0,75 palavras
+          para texto em inglês. Uma limitação a ter em mente é que, para um
+          modelo de geração de texto, o prompt e a saída gerada combinados não
+          devem exceder o comprimento máximo de contexto do modelo. Para modelos
+          de incorporação (que não geram tokens), a entrada deve ser menor que o
+          comprimento máximo de contexto do modelo. Os comprimentos máximos de
+          contexto para cada modelo de geração de texto e incorporação podem ser
+          encontrados no índice do modelo .
+        </p>
       </div>
-
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+      <div className="flex p-14 items-center">
+        <FcKey size={300} />
       </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </>
+    </div>
   );
 }
