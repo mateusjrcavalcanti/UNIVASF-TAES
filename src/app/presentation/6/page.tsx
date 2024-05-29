@@ -1,43 +1,40 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
-
+import Openai from "../../../../public/openai.svg";
 import { Code } from "@/components/code";
 import NodeJS from "../../../../public/nodejs.svg";
+import { TitleWithElement } from "@/components/slide";
 
 /* eslint-disable react/no-unescaped-entities */
-export default function Slide2() {
+export default function Slide6() {
   return (
     <>
       <div>
-        <>
-          <NodeJS className="mx-auto mb-5" />
-        </>
+        <TitleWithElement title="Auth">
+          <div className="flex mb-5">
+            <Openai className="mx-auto mr-5" width={100} fill="#23a27d" />
+            <NodeJS className="mx-auto" />
+          </div>
+        </TitleWithElement>
 
-        <h1 className="text-3xl font-bold sm:text-4xl text-center mb-5">
-          Auth
-        </h1>
-
-        <Code language="javascript" value={code} editable={false} />
+        <Code language="javascript" value={code({})} editable={false} />
       </div>
     </>
   );
 }
 
-const code = `import OpenAI from "openai";
+const code = ({
+  organization = "",
+  apiKey = "",
+}: {
+  organization?: string;
+  apiKey?: string;
+}) => {
+  return `import OpenAI from "openai";
 
-const openai = new OpenAI({
-  organization: "",
-  apiKey: "",
-});
-
-async function main() {
-  const completion = await openai.chat.completions.create({
-    messages: [{ role: "system", content: "You are a helpful assistant." }],
-    model: "gpt-3.5-turbo",
+  const openai = new OpenAI({
+    organization: "${organization}",
+    apiKey: "${apiKey}",
   });
-
-  console.log(completion.choices[0]);
-}
-
-main();
-`;
+  `;
+};

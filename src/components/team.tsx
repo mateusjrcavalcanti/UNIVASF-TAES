@@ -24,7 +24,7 @@ export const Team = () => {
         />
         <Member
           name="Paulo Henrique"
-          src="https://media.licdn.com/dms/image/D4D35AQHacQxBacEqDQ/profile-framedphoto-shrink_800_800/0/1711937454097?e=1716472800&v=beta&t=HzJ45lqToiRSOEcR7IdE9cR_KR9tYEZDjFM_nTVwRQw"
+          src="https://media.licdn.com/dms/image/D4D35AQHacQxBacEqDQ/profile-framedphoto-shrink_800_800/0/1711937454097?e=1717596000&v=beta&t=nwkbJs9JwQAN2jSai_a9oe7NQUKxjDnw3umlN48t-pQ"
           linkedin="paulo-henrique-de-farias-martins-1ba477250"
         />
         <Member

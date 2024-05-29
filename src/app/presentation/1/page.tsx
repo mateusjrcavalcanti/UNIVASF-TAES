@@ -1,4 +1,6 @@
 import { ItemWithIcon } from "@/components/ItemWithIcon";
+import { Grid, Paragraph, Slide, Title1 } from "@/components/slide";
+
 import { BsSoundwave } from "react-icons/bs";
 import { HiOutlinePhotograph } from "react-icons/hi";
 import { IoChatbubbleEllipsesOutline } from "react-icons/io5";
@@ -7,19 +9,17 @@ import { TiMicrophoneOutline } from "react-icons/ti";
 
 export default function Slide1() {
   return (
-    <div>
-      <h1 className="text-3xl font-bold sm:text-4xl text-center">
-        Explorar a API da OpenAI
-      </h1>
+    <Slide>
+      <Title1>Explorar a API da OpenAI</Title1>
 
-      <p className="text-xl mt-4 text-gray-300">
+      <Paragraph>
         A API da OpenAI é uma poderosa ferramenta que oferece acesso a diversos
         modelos de inteligência artificial para realizar uma variedade de
         tarefas. É uma plataforma versátil e eficaz para aplicar técnicas de IA
         em uma variedade de contextos.
-      </p>
+      </Paragraph>
 
-      <div className="mx-auto mt-8 grid grid-cols-1 gap-8 md:mt-16 md:grid-cols-2 md:gap-12 lg:grid-cols-3">
+      <Grid>
         <ItemWithIcon
           iconClassName="bg-gradient-to-r from-[#5436da] to-[#341c9c]"
           title="Geração de texto"
@@ -50,7 +50,7 @@ export default function Slide1() {
           description="Processa entradas de imagem com GPT-4"
           icon={<MdOutlineRemoveRedEye size={24} />}
         />
-      </div>
-    </div>
+      </Grid>
+    </Slide>
   );
 }

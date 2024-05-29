@@ -15,33 +15,26 @@ import {
 import { Code } from "@/components/code";
 import { FcLinux } from "react-icons/fc";
 import { BiLogoWindows } from "react-icons/bi";
+import { Paragraph, Slide, Title2, TitleWithElement } from "@/components/slide";
 
-export default function Slide2() {
+export default function Slide4() {
   return (
-    <>
-      <div>
-        <>
-          <NodeJS className="mx-auto mb-5" />
-        </>
+    <Slide>
+      <TitleWithElement title="Etapas (NodeJS)">
+        <NodeJS className="mx-auto mb-5" />
+      </TitleWithElement>
 
-        <h1 className="text-3xl font-bold sm:text-4xl text-center">
-          Etapas (NodeJS)
-        </h1>
+      <Title2> 2. Instale o Node.js.</Title2>
 
-        <h2 className="mt-10 text-2xl font-bold sm:text-3xl text-start">
-          2. Instale o Node.js.
-        </h2>
+      <Paragraph>
+        Para baixar o Node.js, acesse o site oficial do Node e baixe a versão
+        mais recente marcada como “LTS” (Long Term Support). Se estiver
+        instalando o Node.js pela primeira vez, você pode seguir o guia oficial
+        de uso do Node.js para começar.
+      </Paragraph>
 
-        <p className="text-xl text-justify mt-4 text-gray-300">
-          Para baixar o Node.js, acesse o site oficial do Node e baixe a versão
-          mais recente marcada como “LTS” (Long Term Support). Se estiver
-          instalando o Node.js pela primeira vez, você pode seguir o guia
-          oficial de uso do Node.js para começar.
-        </p>
-
-        <TabsNode />
-      </div>
-    </>
+      <TabsNode />
+    </Slide>
   );
 }
 
