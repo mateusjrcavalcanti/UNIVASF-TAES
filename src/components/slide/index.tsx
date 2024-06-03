@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 import Zoom from "react-medium-image-zoom";
 
 export function Slide({ children }: { children: React.ReactNode }) {
-  return <div>{children}</div>;
+  return <div className="container">{children}</div>;
 }
 
 export function Title1({ children }: { children: React.ReactNode }) {

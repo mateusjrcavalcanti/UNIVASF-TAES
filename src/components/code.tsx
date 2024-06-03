@@ -3,6 +3,7 @@ import { StreamLanguage } from "@codemirror/language";
 import { shell } from "@codemirror/legacy-modes/mode/shell";
 import { javascript } from "@codemirror/lang-javascript";
 import { dracula } from "@uiw/codemirror-theme-dracula";
+import { json } from "@codemirror/lang-json";
 
 const Theme = EditorView.theme({
   "&": {
@@ -33,6 +34,7 @@ export function Code({
   const extensions = [Theme];
   if (language === "shell") extensions.push(StreamLanguage.define(shell));
   if (language === "javascript") extensions.push(javascript({ jsx: true }));
+  if (language === "json") extensions.push(json());
   return (
     <CodeMirror
       value={value}

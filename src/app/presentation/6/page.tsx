@@ -5,7 +5,6 @@ import { Code } from "@/components/code";
 import NodeJS from "../../../../public/nodejs.svg";
 import { Slide, TitleWithElement } from "@/components/slide";
 import { Input } from "@/components/ui/input";
-import { useEffect, useState } from "react";
 import { Label } from "@/components/ui/label";
 import { useOpenAI } from "../OpenAIContext";
 
@@ -20,29 +19,27 @@ export default function Slide6() {
         </div>
       </TitleWithElement>
 
-      <AuthCodeExample />
+      <div className="p-5">
+        <Code language="javascript" value={AuthCode()} editable={false} />
+      </div>
 
       <ConfigureOpenAI />
     </Slide>
   );
 }
 
-const AuthCodeExample = () => {
+export const AuthCode = () => {
   const { openai } = useOpenAI();
 
-  const code = `import OpenAI from "openai";
+  let code = `import OpenAI from "openai";`;
+  code += `\n\nconst openai = new OpenAI({`;
+  code += openai?.organization
+    ? `\n  organization: "${openai?.organization || ""}",`
+    : "";
+  code += `\n  apiKey: "${(openai?.apiKey || "").replace(/./g, "*")}",`;
+  code += `\n});`;
 
-  const openai = new OpenAI({
-    organization: "${openai?.organization || ""}",
-    apiKey: "${(openai?.apiKey || "").replace(/./g, "*")}",
-  });
-  `;
-
-  return (
-    <div className="p-5">
-      <Code language="javascript" value={code} editable={false} />
-    </div>
-  );
+  return code;
 };
 
 const ConfigureOpenAI = () => {

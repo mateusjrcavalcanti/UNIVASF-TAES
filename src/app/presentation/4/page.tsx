@@ -43,13 +43,13 @@ function TabsNode() {
     <Tabs defaultValue="linux">
       <TabsList className="flex my-5">
         <TabsTrigger
-          className="flex items-center mx-auto py-2 px-4 bg-white rounded-xl text-black text-lg font-bold"
+          className="flex items-center mx-auto py-2 px-4 text-black text-lg font-bold bg-gray-400 rounded-xl data-[state=active]:bg-white data-[state=active]:text-black hover:bg-white hover:text-black"
           value="linux"
         >
           <FcLinux size={30} className="mr-1" /> Linux
         </TabsTrigger>
         <TabsTrigger
-          className="flex items-center mx-auto py-2 px-4 bg-white rounded-xl text-black text-lg font-bold"
+          className="flex items-center mx-auto py-2 px-4 text-black text-lg font-bold bg-gray-400 rounded-xl data-[state=active]:bg-white data-[state=active]:text-black hover:bg-white hover:text-black"
           value="windows"
         >
           <BiLogoWindows size={30} className="mr-1" /> Windows

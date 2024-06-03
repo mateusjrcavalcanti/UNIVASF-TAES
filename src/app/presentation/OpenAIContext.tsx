@@ -6,6 +6,10 @@ import React, {
   useEffect,
 } from "react";
 import { OpenAI } from "openai";
+import {
+  ChatCompletionMessageParam,
+  ChatModel,
+} from "openai/resources/index.mjs";
 
 interface OpenAIContextProps {
   openai: OpenAI | null;
@@ -44,7 +48,12 @@ export const OpenAIProvider = ({ children }: { children: ReactNode }) => {
   }, []);
 
   return (
-    <OpenAIContext.Provider value={{ openai, updateOpenAI }}>
+    <OpenAIContext.Provider
+      value={{
+        openai,
+        updateOpenAI,
+      }}
+    >
       {children}
     </OpenAIContext.Provider>
   );
