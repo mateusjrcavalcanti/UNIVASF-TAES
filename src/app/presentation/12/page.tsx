@@ -193,7 +193,7 @@ export default function Page() {
   );
 }
 
-export const ExampleCode = ({
+const ExampleCode = ({
   size,
   n,
   prompt,
