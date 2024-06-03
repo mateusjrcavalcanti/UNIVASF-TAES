@@ -26,7 +26,7 @@ export default function Page() {
       <ul className="list-disc px-10 text-xl text-justify mt-4 text-gray-300">
         <li>Narrar uma postagem de blog escrita</li>
         <li>Produzir áudio falado em vários idiomas</li>
-        <li>Forneça saída de áudio em tempo real usando streaming</li>
+        <li>Fornecer saída de áudio em tempo real usando streaming</li>
       </ul>
 
       <Title2>Posso criar uma cópia personalizada da minha própria voz?</Title2>

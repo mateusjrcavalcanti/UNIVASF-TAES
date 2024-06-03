@@ -21,7 +21,7 @@ export default function Page() {
       <Paragraph>
         Embora o GPT-4 com visão seja poderoso e possa ser usado em muitas
         situações, é importante entender as limitações do modelo. Aqui estão
-        algumas das limitações que conhecemos:
+        algumas das limitações conhecidas:
       </Paragraph>
 
       <ul className="list-disc px-10 text-xl text-justify mt-4 text-gray-300">
@@ -69,7 +69,7 @@ export default function Page() {
           Contagem: Pode fornecer contagens aproximadas de objetos em imagens.
         </li>
         <li>
-          CAPTCHAs: Por motivos de segurança, implementamos um sistema para
+          CAPTCHAs: Por motivos de segurança, foi implementado um sistema para
           bloquear o envio de CAPTCHAs.
         </li>
       </ul>

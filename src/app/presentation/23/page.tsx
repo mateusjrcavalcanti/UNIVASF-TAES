@@ -35,7 +35,7 @@ export default function Page() {
       <Title2>Idiomas Suportados</Title2>
 
       <Paragraph>
-        Atualmente, oferecemos suporte aos seguintes idiomas nos endpoints de
+        Atualmente, são suportados os seguintes idiomas nos endpoints de
         transcrições e traduções:
       </Paragraph>
 

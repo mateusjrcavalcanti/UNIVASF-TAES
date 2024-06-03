@@ -20,8 +20,8 @@ export default function Page() {
 
       <Paragraph>
         A API de Áudio fornece dois endpoints de reconhecimento de fala para
-        texto, transcrições e traduções, baseados no nosso modelo Whisper
-        large-v2 de código aberto e ponta. Eles podem ser usados para:
+        texto, transcrições e traduções, baseados no modelo Whisper large-v2 de
+        código aberto e ponta. Eles podem ser usados para:
       </Paragraph>
 
       <ul className="list-disc px-10 text-xl text-justify mt-4 text-gray-300">

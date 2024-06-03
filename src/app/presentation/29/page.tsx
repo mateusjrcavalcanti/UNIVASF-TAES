@@ -16,7 +16,7 @@ export default function Page() {
         </span>
       </TitleWithElement>
 
-      <Title2>Limitações</Title2>
+      <Title2>Custos</Title2>
 
       <Paragraph>
         As entradas de imagem são tarifadas e cobradas em tokens, da mesma forma

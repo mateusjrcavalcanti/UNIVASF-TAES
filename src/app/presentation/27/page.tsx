@@ -31,15 +31,15 @@ export default function Page() {
         Para conversas longas em execução, sugerimos passar imagens via URLs em
         vez de base64. A latência do modelo também pode ser melhorada
         redimensionando suas imagens com antecedência para que sejam menores que
-        o tamanho máximo esperado. Para o modo de baixa resolução, esperamos uma
-        imagem de 512px x 512px. Para o modo de alta resolução, o lado curto da
-        imagem deve ser inferior a 768px e o lado longo inferior a 2.000px.
+        o tamanho máximo esperado. Para o modo de baixa resolução, é esperado
+        uma imagem de 512px x 512px. Para o modo de alta resolução, o lado curto
+        da imagem deve ser inferior a 768px e o lado longo inferior a 2.000px.
       </Paragraph>
 
       <Paragraph>
         Após uma imagem ter sido processada pelo modelo, ela é excluída dos
-        servidores da OpenAI e não é retida. Não utilizamos dados enviados via
-        API da OpenAI para treinar nossos modelos.
+        servidores da OpenAI e não é retida. Os dados enviados via API não são
+        usados no terinamento dos modelos.
       </Paragraph>
     </Slide>
   );

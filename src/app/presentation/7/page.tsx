@@ -34,11 +34,10 @@ export default function Slide7() {
         aplicativos para:
         <ul className="list-disc px-10">
           <li>Esboço de documentos</li>
-          <li>Escreva o código do computador</li>
-          <li>Responda perguntas sobre uma base de conhecimento</li>
-          <li>Analise textos</li>
-          <li>Dê ao software uma interface de linguagem natural</li>
-          <li>Tutor em uma variedade de assuntos</li>
+          <li>Escrever algoritmos</li>
+          <li>Responder perguntas sobre uma base de conhecimento</li>
+          <li>Analisar textos</li>
+          <li>Tutoria em uma variedade de assuntos</li>
           <li>Traduzir idiomas</li>
           <li>Simular personagens para jogos</li>
         </ul>

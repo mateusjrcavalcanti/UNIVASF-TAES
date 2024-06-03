@@ -44,7 +44,7 @@ export default function Page() {
       </Paragraph>
 
       <Paragraph>
-        Por padrão, as imagens são geradas em standardqualidade, mas ao usar
+        Por padrão, as imagens são geradas em na qualidade standard, mas ao usar
         DALL-E 3 você pode definir quality: "hd"para um detalhe melhorado.
         Imagens quadradas e de qualidade padrão são as mais rápidas de gerar.
       </Paragraph>
