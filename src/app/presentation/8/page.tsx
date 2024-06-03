@@ -4,7 +4,6 @@ import { Code } from "@/components/code";
 import { Slide, TitleWithElement } from "@/components/slide";
 import { FaCode, FaCodePullRequest } from "react-icons/fa6";
 import { IoChatbubbleEllipsesOutline } from "react-icons/io5";
-import { AuthCode } from "../6/page";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@radix-ui/react-tabs";
 import { useOpenAI } from "../OpenAIContext";
@@ -188,6 +187,8 @@ const TextGenerationCode = ({
   chatCompletionsMessages?: ChatCompletionMessageParam[];
   chatCompletionsModel?: (string & {}) | ChatModel | undefined;
 }) => {
+  const { AuthCode } = useOpenAI();
+
   var code = AuthCode();
   code += `\n
 async function main() {

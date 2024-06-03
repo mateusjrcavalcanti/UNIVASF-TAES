@@ -9,7 +9,9 @@ import { Label } from "@/components/ui/label";
 import { useOpenAI } from "../OpenAIContext";
 
 /* eslint-disable react/no-unescaped-entities */
-export default function Slide6() {
+export default function Page() {
+  const { AuthCode } = useOpenAI();
+
   return (
     <Slide>
       <TitleWithElement title="Auth">
@@ -27,20 +29,6 @@ export default function Slide6() {
     </Slide>
   );
 }
-
-export const AuthCode = () => {
-  const { openai } = useOpenAI();
-
-  let code = `import OpenAI from "openai";`;
-  code += `\n\nconst openai = new OpenAI({`;
-  code += openai?.organization
-    ? `\n  organization: "${openai?.organization || ""}",`
-    : "";
-  code += `\n  apiKey: "${(openai?.apiKey || "").replace(/./g, "*")}",`;
-  code += `\n});`;
-
-  return code;
-};
 
 const ConfigureOpenAI = () => {
   const { updateOpenAI, openai } = useOpenAI();

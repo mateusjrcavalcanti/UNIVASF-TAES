@@ -14,6 +14,7 @@ import {
 interface OpenAIContextProps {
   openai: OpenAI | null;
   updateOpenAI: (apiKey: string, organization: string) => void;
+  AuthCode: () => string;
 }
 
 const OpenAIContext = createContext<OpenAIContextProps | undefined>(undefined);
@@ -31,6 +32,18 @@ export const OpenAIProvider = ({ children }: { children: ReactNode }) => {
       dangerouslyAllowBrowser: true,
     });
     setOpenai(openaiInstance);
+  };
+
+  const AuthCode = () => {
+    let code = `import OpenAI from "openai";`;
+    code += `\n\nconst openai = new OpenAI({`;
+    code += openai?.organization
+      ? `\n  organization: "${openai?.organization || ""}",`
+      : "";
+    code += `\n  apiKey: "${(openai?.apiKey || "").replace(/./g, "*")}",`;
+    code += `\n});`;
+
+    return code;
   };
 
   useEffect(() => {
@@ -52,6 +65,7 @@ export const OpenAIProvider = ({ children }: { children: ReactNode }) => {
       value={{
         openai,
         updateOpenAI,
+        AuthCode,
       }}
     >
       {children}
